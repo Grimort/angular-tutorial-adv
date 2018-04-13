@@ -10,23 +10,26 @@ import { PagesModule } from './pages/pages.module';
 // temporal
 import { FormsModule } from '@angular/forms';
 
+// servicios
+import { SettingsService } from './services/services.index';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
-// import { BarraprogresoComponent } from './components/barraprogreso/barraprogreso.component';
+import { ServiceModule } from './services/service.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent,
-    // BarraprogresoComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     PagesModule,
-    APP_ROUTES
+    APP_ROUTES,
+    ServiceModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
